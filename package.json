@@ -1,0 +1,32 @@
+{
+  "name": "javascript-tests",
+  "version": "0.0.1",
+  "description": "A suite of JavaScript tests (hopefully) useful for interviews",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ahmednuaman/javascript-tests.git"
+  },
+  "keywords": [
+    "karma",
+    "testing",
+    "test",
+    "jasmine",
+    "interview",
+    "javascript"
+  ],
+  "author": "Ahmed Nuaman (ahmed@ahmednuaman.com)",
+  "license": "Apache v2",
+  "bugs": {
+    "url": "https://github.com/ahmednuaman/javascript-tests/issues"
+  },
+  "homepage": "https://github.com/ahmednuaman/javascript-tests",
+  "dependencies": {
+    "karma": "^0.12.16",
+    "karma-jasmine": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4"
+  }
+}
