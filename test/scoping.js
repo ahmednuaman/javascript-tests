@@ -1,10 +1,11 @@
 describe('scoping', function () {
   it('should correctly deal with scoping `this` back to the callee', function () {
     var mod = new Module(),
-        request;
+    request;
 
     request = function (callback) {
-      return callback();
+      // Changed the execution context through apply function, though it can be done with several other ways
+      return callback.apply(mod);
     };
 
     function Module () {
