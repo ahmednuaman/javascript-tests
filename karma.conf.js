@@ -71,8 +71,7 @@ module.exports = function(config) {
         base: 'Chrome',
         flags: ['--no-sandbox']
       }
-    }
-
+    },
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
