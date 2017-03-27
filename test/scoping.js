@@ -8,14 +8,16 @@ describe('scoping', function () {
     };
 
     function Module () {
+      
       this.foo = 'bar';
     }
 
     Module.prototype.method = function() {
-      return this.foo;
+      return mod.foo;
     };
 
     Module.prototype.req = function() {
+
       return request(this.method);
     };
 
