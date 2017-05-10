@@ -3,6 +3,16 @@ describe('flatten array', function () {
     var arr = [1, 2, [1, 2, [3, 4, 5, [1]]], 2, [2]],
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
 
+        function flatten(a) {
+          return a.reduce(function(explored, toExplore) {
+            return explored.concat(
+              Array.isArray(toExplore) ? flatten(toExplore) : toExplore
+            );
+          }, []);
+        }
+
+        var arr = flatten(arr).sort();
+
     expect(arr).toEqual(expected);
   });
 });
