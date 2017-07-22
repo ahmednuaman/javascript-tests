@@ -1,6 +1,8 @@
-# JavaScript Tests [![Build Status](https://travis-ci.org/ahmednuaman/javascript-tests.svg?branch=master)](https://travis-ci.org/ahmednuaman/javascript-tests)
+# JavaScript Tests [![Build Status](https://travis-ci.org/eliasbalasis/javascript-tests.svg?branch=master)](https://travis-ci.org/eliasbalasis/javascript-tests)
 
 A suite of JavaScript tests (hopefully) useful for interviews
+
+THIS IS A CLONE OF (https://github.com/ahmednuaman/javascript-tests)
 
 ## How to use
 1. `npm install`
