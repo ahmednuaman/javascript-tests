@@ -2,7 +2,7 @@
 
 A suite of JavaScript tests (hopefully) useful for interviews
 
-THIS IS A CLONE OF (https://github.com/ahmednuaman/javascript-tests)
+THIS IS A FORK OF (https://github.com/ahmednuaman/javascript-tests)
 
 ## How to use
 1. `npm install`
