@@ -21,8 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/clone-object.js',
-      'test/scoping.js'
+      'test/**/*.js'
     ],
 
 

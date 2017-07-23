@@ -27,8 +27,7 @@
   "homepage": "https://github.com/ahmednuaman/javascript-tests",
   "dependencies": {
     "karma": "^0.12.32",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "lodash": "^4.17.4"
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "devDependencies": {
     "jasmine-core": "^2.6.4",
