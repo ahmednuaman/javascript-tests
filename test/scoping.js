@@ -7,8 +7,11 @@ describe('scoping', function () {
       return callback();
     };
 
+    var self
+
     function Module () {
-      this.self = this;
+      // keeping .this in self variable to avoid any
+      self = this;
       self.foo = 'bar';
     }
 
