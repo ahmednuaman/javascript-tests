@@ -12,8 +12,6 @@ describe('scoping', function () {
 
     function Module () {
       // keeping .this in self variable to avoid scoping issues
-      // ultimate test would be to extract Module def into separate file, index.js for example if working with node.js
-      // then, add req prototype in the test file
       self = this;
       self.foo = 'bar';
     }
