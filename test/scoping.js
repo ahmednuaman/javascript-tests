@@ -10,7 +10,7 @@ describe('scoping', function () {
     var self
 
     function Module () {
-      // keeping .this in self variable to avoid any
+      // keeping .this in self variable to avoid scoping issues
       self = this;
       self.foo = 'bar';
     }
