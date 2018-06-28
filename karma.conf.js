@@ -6,9 +6,10 @@ module.exports = function(config) {
 
   if (!process.env.TRAVIS) {
     browsers.push('Chrome');
-  } else {
-    browsers.push('Chrome_travis_ci');
   }
+  // else {
+  //   browsers.push('Chrome_travis_ci');
+  // }
 
   config.set({
 
