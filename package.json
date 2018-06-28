@@ -33,7 +33,7 @@
     "watch": "^1.0.2"
   },
   "devDependencies": {
-    "karma-chrome-launcher": "^0.1.12",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-firefox-launcher": "^0.1.6"
   }
 }
