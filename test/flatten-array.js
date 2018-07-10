@@ -4,8 +4,8 @@ describe('flatten array', function () {
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
 
     if (Array.isArray(arr)) {
-      const stringArray = JSON.stringify(arr);
-      const regex = new RegExp(/\[|\]/g);
+      var stringArray = JSON.stringify(arr);
+      var regex = new RegExp(/\[|\]/g);
       arr = JSON.parse('[' + stringArray.replace(regex, '') + ']').sort();
     }
 
