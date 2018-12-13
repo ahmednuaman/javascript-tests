@@ -16,28 +16,41 @@ var ArrayHelper = /** @class */ (function () {
   function ArrayHelper () {}
 
   
-  ArrayHelper.prototype.determineLevels = function (arr = null) {
-    let result = 1;
+  ArrayHelper.prototype.determineLevels = function (arr) {
+    var result = 1;
     result = this.mapForInnerArrays(arr, result);
     return result;
   }
   
-  ArrayHelper.prototype.mapForInnerArrays = function (arr = null, result = null) {
+  ArrayHelper.prototype.mapForInnerArrays = function (arr, result) {
+
+
+    /*
+    THIS WAS THE ES6 WAY (PahntomJS does not support ES6)
     arr.map(el => {
       if (Array.isArray(el)) {
         result++;
         result = this.mapForInnerArrays(el, result);
       }
-    });
+    });*/
+
+    this.reduce(arr);
+
+
     return result;
   }
 
-  ArrayHelper.prototype.flattenArray = function (toFlatten = null) {
-    let result = [];
+  ArrayHelper.prototype.reduce = function (arr) {
+    var self = this;
+    return arr.reduce(function (flat, toFlatten) {
+      return flat.concat((Array.isArray(toFlatten)) ? self.reduce(toFlatten) : toFlatten);
+    }, []);
+  }
+
+  ArrayHelper.prototype.flattenArray = function (toFlatten) {
+    var result = [];
     if (Array.isArray(toFlatten)) {
-      let levels = this.determineLevels(toFlatten);
-      toFlatten = toFlatten.flat(levels);
-      result = toFlatten.sort();
+      result = this.reduce(toFlatten).sort();
     }
     return result;
   }

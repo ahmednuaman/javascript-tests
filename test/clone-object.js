@@ -1,7 +1,7 @@
 describe('clone object', function () {
   it('should clone an object', function () {
 
-    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']}, 
+    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']}, obj;
     obj = new ObjectHelper().cloneObject(expected);
 
     expect(obj).toEqual(expected);
@@ -18,8 +18,8 @@ var ObjectHelper = /** @class */ (function () {
     this._createPolyfill();
   }
 
-  ObjectHelper.prototype.cloneObject = function (src = null) {
-    let result = null;
+  ObjectHelper.prototype.cloneObject = function (src) {
+    var result = null;
     try {
       result = this._cloneObject(src);
     } catch (e) {
@@ -28,8 +28,8 @@ var ObjectHelper = /** @class */ (function () {
     return result;
   }
 
-  ObjectHelper.prototype._cloneObject = function (src = null) {
-    let result = null;
+  ObjectHelper.prototype._cloneObject = function (src) {
+    var result = null;
     if (src && typeof Object.assign === "function") {
       result = Object.assign({}, src);
     } else {
@@ -38,11 +38,11 @@ var ObjectHelper = /** @class */ (function () {
     return result;
   }
 
-  ObjectHelper.prototype._cloneFromJSON = function (src = null) {
+  ObjectHelper.prototype._cloneFromJSON = function (src) {
     return (JSON.parse(JSON.stringify(src)));
   }
 
-  ObjectHelper.prototype._createPolyfill = function (src = null) {
+  ObjectHelper.prototype._createPolyfill = function (src) {
     /** Polyfill from MDN for <= ES5 */
     if (typeof Object.assign != 'function') {
       // Must be writable: true, enumerable: false, configurable: true
