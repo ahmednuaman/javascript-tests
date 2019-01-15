@@ -1,9 +1,13 @@
-describe('clone object', function () {
-  it('should clone an object', function () {
-    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
-        obj = {};
+function cloneObject(src) {
+	return Object.assign({}, src);
+}
 
-    expect(obj).toEqual(expected);
-    expect(obj).not.toBe(expected);
-  });
-});
+var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']};
+var obj = cloneObject(expected);
+console.log(expected);
+console.log(obj);
+console.log(expectNotToBe(src, clone));
+
+function expectNotToBe(src, clone) {
+	return src === clone;
+}
