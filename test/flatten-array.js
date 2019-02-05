@@ -6,7 +6,8 @@ describe('flatten array', function () {
     
     var tempArrStr = arr.toString();
     var splittedArr = tempArrStr.split(',');
-    arr = splittedArr.sort().map(Number);
+    arr = splittedArr.sort();
+    arr = arr.map(Number);
 
     expect(arr).toEqual(expected);
   });
