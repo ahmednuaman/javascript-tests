@@ -7,6 +7,9 @@ describe("clone object", function() {
       },
       obj = {};
 
+    //there is many solutions to do it, here is another one:
+    obj = { ...expected };
+
     expect(obj).toEqual(expected);
     expect(obj).not.toBe(expected);
   });
