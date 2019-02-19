@@ -15,6 +15,17 @@ describe("flatten array", function() {
 
     arr = [...arr].flat(3).sort();
 
+    //there is many solutions to do it, here is another one:
+
+    // function flatten(arr) {
+    //   return arr.reduce(function(flat, toFlatten) {
+    //     return flat.concat(
+    //       Array.isArray(toFlatten) ? flatten(toFlatten) : toFlatten
+    //     );
+    //   }, []);
+    // }
+    // flatten(arr);
+
     expect(arr).toEqual(expected);
   });
 });
