@@ -16,7 +16,8 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      // Modern ES solution would be to use => fat arrow functions that bind `this` implicitly
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');
