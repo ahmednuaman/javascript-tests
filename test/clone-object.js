@@ -3,6 +3,13 @@ describe('clone object', function () {
     var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
         obj = {};
 
+        function objectCloner(object) {
+          return JSON.parse(JSON.stringify(object))
+        }
+
+        obj = objectCloner(expected);
+
+
     expect(obj).toEqual(expected);
     expect(obj).not.toBe(expected);
   });
