@@ -28,7 +28,7 @@
   "dependencies": {
     "jasmine-core": "^3.3.0",
     "karma": "^4.0.0",
-    "karma-jasmine": "^0.3.5",
+    "karma-jasmine": "^2.0.0",
     "karma-phantomjs-launcher": "^1.0.4"
   },
   "devDependencies": {
