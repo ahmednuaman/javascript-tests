@@ -16,7 +16,8 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function () {
-      return request(this.method.bind(this));
+      const that = this;
+      return request(function () { return that.method(); });
     };
 
     expect(mod.req()).toBe('bar');
