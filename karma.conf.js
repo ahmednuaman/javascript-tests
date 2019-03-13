@@ -2,7 +2,7 @@
 // Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
 
 module.exports = function(config) {
-  var browsers = [];
+  var browsers = ['PhantomJS', 'Firefox'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
@@ -41,7 +41,7 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress'],
 
 
     // web server port
