@@ -16,7 +16,10 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      // generally I avoid using 'this' when coding nowadays but
+      // binding the method here seems like the best solution
+      // to me
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');
