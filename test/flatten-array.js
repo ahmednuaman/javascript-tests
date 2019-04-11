@@ -7,15 +7,13 @@ describe('flatten array', function () {
     let flatAndSortArray = arr => {
       
       //Finding the depth of the array
-      let arrayDepth= arr=>Array.isArray(arr)? Math.max(...arr.map(arrayDepth))+1:0;
+      let arrayDepth = arr=>Array.isArray(arr)? Math.max(...arr.map(arrayDepth))+1:0;
       
       //Flattening and sorting
       return arr.flat(arrayDepth(arr))
        .sort((a, b) => a-b);
     };
     
-    var flatArr = flatAndSortArray(arr);
-    
-    expect(flatArr).toEqual(expected);
+    expect(flatAndSortArray(arr)).toEqual(expected);
   });
 });
