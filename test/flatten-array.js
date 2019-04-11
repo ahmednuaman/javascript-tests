@@ -14,7 +14,8 @@ describe('flatten array', function () {
        .sort((a, b) => a-b);
     };
     
-    expect(arr).toEqual(expected);
-    expect(flatAndSortArray(arr).toEqual(expected));
+    var flatArr = flatAndSortArray(arr);
+    
+    expect(flatArr).toEqual(expected);
   });
 });
