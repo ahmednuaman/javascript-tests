@@ -32,6 +32,9 @@
     "karma-phantomjs-launcher": "0.1.4"
   },
   "devDependencies": { 
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
     "jasmine-core": "^3.3.0", 
     "karma-chrome-launcher": "0.1.12", 
     "karma-firefox-launcher": "0.1.6"
