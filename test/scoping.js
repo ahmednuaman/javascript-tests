@@ -7,15 +7,15 @@ describe('scoping', function () {
       return callback();
     };
 
-    function Module() {
+    function Module () {
       this.foo = 'bar';
     }
 
-    Module.prototype.method = function () {
+    Module.prototype.method = function() {
       return this.foo;
     };
 
-    Module.prototype.req = function () {
+    Module.prototype.req = function() {
       return request(this.method.bind(this));
     };
 
