@@ -3,19 +3,19 @@ describe('scoping', function () {
     var mod = new Module(),
         request;
 
-    request = function (callback) {
+    request = function(callback) {
       return callback();
     };
 
-    function Module () {
+    function Module() {
       this.foo = 'bar';
     }
 
-    Module.prototype.method = function() {
+    Module.prototype.method = function () {
       return this.foo;
     };
 
-    Module.prototype.req = function() {
+    Module.prototype.req = function () {
       return request(this.method);
     };
 
