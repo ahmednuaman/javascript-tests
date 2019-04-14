@@ -8,8 +8,8 @@ describe('clone object', function () {
     
      function iterationCopy(expected) {
 	  let target = {};
-		  for (let prop in source) {
-		    if (source.hasOwnProperty(prop)) {
+		  for (let prop in src) {
+		    if (src.hasOwnProperty(prop)) {
 		      target[prop] = src[prop];
 		    }
 		  }
