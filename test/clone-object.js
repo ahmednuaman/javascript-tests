@@ -1,9 +1,9 @@
 describe('clone object', function () {
   it('should clone an object', function () {
-    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']};
+    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
     let obj = {};
 
-    //in this case I go through all the properties of the original object and 
+    //in this case I iterate all the properties of the original object and 
     //during the loop I am assigning each one to the new created object
     
      function iterationCopy(expected) {
