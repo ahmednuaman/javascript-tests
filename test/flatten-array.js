@@ -13,14 +13,20 @@ describe('flatten array', function () {
         // if parameter is an array then iterate each position
         for (z=0; z<recArr.length; z++) {
           var nextArr = recArr[z];
-          // if it has more than 1 entry then recurvisve call
-          if (nextArr.length > 1) {
-            recursiveFunc(nextArr);
+          // check if it is an array and has more than 1 entry then recurvisve call
+          if (Array.isArray(nextArr)) {
+            if (nextArr.length > 1) {
+              recursiveFunc(nextArr);
+            } else {
+              // if it is an array of only 1 then no need to call recursive just add to output
+              output[count]=nextArr[0];
+              count++;
+            }            
           } else {
-            // if it is an array of only 1 then no need to call recursive just add to output
+            //not an array just add
             output[count]=nextArr;
             count++;
-          }
+          }          
         }
       } else {
         // not an array just add to output
