@@ -3,6 +3,5 @@ services:
   - xvfb
 node_js:
   - "node"
-  - "iojs"
 before_script:
   - export DISPLAY=:99.0
