@@ -33,8 +33,7 @@
     "karma-phantomjs-launcher": "1.0.4"
   },
   "devDependencies": {
-    "karma": "^0.12.37",
-    "karma-chrome-launcher": "^0.1.12",
-    "karma-firefox-launcher": "^0.1.6"
+    "karma-chrome-launcher": "0.1.12",
+    "karma-firefox-launcher": "0.1.6"
   }
 }
