@@ -11,14 +11,12 @@ describe('scoping', function() {
       this.foo = 'bar';
     }
 
-    Module.prototype.module = Module();
-
     Module.prototype.method = function() {
       return this.foo;
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');

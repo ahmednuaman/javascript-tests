@@ -6,9 +6,8 @@ describe('clone object', function() {
         skills: ['cycling', 'walking', 'eating']
       },
       obj = {};
-    for (let key in expected) {
-      obj[key] = expected[key];
-    }
+
+    obj = JSON.parse(JSON.stringify(expected));
 
     expect(obj).toEqual(expected);
     expect(obj).not.toBe(expected);
