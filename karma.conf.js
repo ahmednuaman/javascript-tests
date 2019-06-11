@@ -4,9 +4,9 @@
 module.exports = function(config) {
   var browsers = ['ChromeHeadless', 'Firefox'];
 
-  // if (!process.TRAVIS) {
-  //   browsers.push('Chrome');
-  // }
+  if (!process.TRAVIS) {
+    browsers.push('Chrome');
+  }
 
   config.set({
 
