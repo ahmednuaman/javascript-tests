@@ -7,5 +7,3 @@ node_js:
 before_script:
   - export DISPLAY=:99.0
   
-
-
