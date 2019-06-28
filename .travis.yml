@@ -1,6 +1,7 @@
 language: node_js
 node_js:
   - "node"
+  - "iojs"
 services:
   - xvfb
 before_script:
