@@ -2,7 +2,7 @@
 // Generated on Fri Jul 12 2019 17:03:22 GMT+0100 (British Summer Time)
 
 module.exports = function(config) {
-  var browsers = ['Firefox'];
+  var browsers = ['PhantomJS', 'Firefox'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
@@ -21,6 +21,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
       'test/*.js'
     ],
 

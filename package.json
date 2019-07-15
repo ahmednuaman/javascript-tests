@@ -29,10 +29,12 @@
     "jasmine-core": "^2.99.0",
     "karma": "0.13.22",
     "karma-jasmine": "^0.3.8",
-    "karma-phantomjs-launcher": "1.0.4"
+    "karma-phantomjs-launcher": "1.0.4",
+    "phantomjs-polyfill-object-assign": "0.0.2"
   },
   "devDependencies": {
     "karma-chrome-launcher": "0.1.12",
-    "karma-firefox-launcher": "0.1.6"
+    "karma-firefox-launcher": "0.1.6",
+    "phantomjs-polyfill-object-assign": "0.0.2"
   }
 }
