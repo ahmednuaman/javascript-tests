@@ -1,3 +1,5 @@
+// bind() prototype method - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+
 describe('scoping', function () {
   it('should correctly deal with scoping `this` back to the callee', function () {
     var mod = new Module(),
@@ -16,7 +18,7 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');
