@@ -4,7 +4,7 @@
   "description": "A suite of JavaScript tests (hopefully) useful for interviews",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js",
+    "test": "karma start karma.conf.js --watch=false",
     "watch": "karma start karma.conf.js --singleRun=false"
   },
   "repository": {
@@ -28,6 +28,7 @@
   "dependencies": {
     "jasmine-core": "^3.4.0",
     "karma": "^4.1.0",
+    "karma-cli": "^2.0.0",
     "karma-jasmine": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4"
   },
