@@ -3,6 +3,7 @@ services:
   - xvfb
 node_js:
   - 'node'
-  - 'iojs'
+#  - 'iojs'
+# io.js has merged with the Node.js project again. There won't be any further io.js releases. All of the features in io.js are available in Node.js v4 and above.
 before_script:
   - export DISPLAY=:99.0
