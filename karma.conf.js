@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
+// Generated on Fri Jul 12 2019 17:03:22 GMT+0100 (British Summer Time)
 
 module.exports = function(config) {
   var browsers = ['PhantomJS', 'Firefox'];
@@ -21,20 +21,19 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/**/*.js'
+      './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
+      'test/*.js'
     ],
 
 
-    // list of files to exclude
+    // list of files / patterns to exclude
     exclude: [
-      
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    
     },
 
 
@@ -54,7 +53,7 @@ module.exports = function(config) {
 
     // level of logging
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG,
 
 
     // enable / disable watching file and executing tests whenever any file changes
@@ -68,6 +67,10 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: true
-  });
-};
+    singleRun: true,
+
+    // Concurrency level
+    // how many browser should be started simultaneous
+    concurrency: 1
+  })
+}
