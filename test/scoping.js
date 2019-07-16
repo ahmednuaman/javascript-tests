@@ -8,7 +8,7 @@ describe('scoping', function () {
     };
 
     function Module () {
-      this.foo = 'bar';
+      foo = 'bar';
     }
 
     Module.prototype.method = function() {
