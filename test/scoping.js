@@ -2,13 +2,15 @@ describe('scoping', function () {
   it('should correctly deal with scoping `this` back to the callee', function () {
     var mod = new Module(),
         request;
+    var foo = '';
 
     request = function (callback) {
+      this.foo = 'bar'
       return callback();
     };
 
     function Module () {
-      this.foo = 'bar';
+      //this.foo = 'bar';
     }
 
     Module.prototype.method = function() {
