@@ -3,9 +3,9 @@ describe('flatten array', function () {
     var arr = [1, 2, [1, 2, [3, 4, 5, [1]]], 2, [2]],
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
     
-//     Using inbuilt flatten and sort functionality in a neat one liner
-    const arrAsString = arr.toString();
-    const flatArr = arrAsString.split(',').map(Number);
+//     re-write to work with travis, converting the array to a string array and then mapping it as number array, then finally sorting it into the correct order
+    let stringArr = arr.toString();
+    let flattenedArr = arrAsString.split(',').map(Number);
 
     arr = flatArr.sort();
 
