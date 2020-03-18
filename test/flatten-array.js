@@ -4,7 +4,10 @@ describe('flatten array', function () {
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
     
 //     Using inbuilt flatten and sort functionality in a neat one liner
-    arr = arr.flat('Infinity').sort(function(a, b){return a-b});
+    const arrAsString = arr.toString();
+    const flatArr = arrAsString.split(',').map(Number);
+
+    arr = flatArr.sort();
 
     expect(arr).toEqual(expected);
   });
