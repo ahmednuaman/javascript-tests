@@ -5,7 +5,7 @@ describe('flatten array', function () {
     
 //     re-write to work with travis, converting the array to a string array and then mapping it as number array, then finally sorting it into the correct order
     let stringArr = arr.toString();
-    let flattenedArr = arrAsString.split(',').map(Number);
+    let flattenedArr = stringArr.split(',').map(Number);
 
     arr = flattenedArr.sort();
 
