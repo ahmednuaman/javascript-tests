@@ -4,8 +4,8 @@ describe('flatten array', function () {
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
     
 //     re-write to work with travis, converting the array to a string array and then mapping it as number array, then finally sorting it into the correct order
-    let stringArr = arr.toString();
-    let flattenedArr = stringArr.split(',').map(Number);
+    const stringArr = arr.toString();
+    const flattenedArr = stringArr.split(',').map(Number);
 
     arr = flattenedArr.sort();
 
