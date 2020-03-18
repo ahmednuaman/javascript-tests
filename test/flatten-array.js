@@ -4,7 +4,7 @@ describe('flatten array', function () {
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
     
 //     Using inbuilt flatten and sort functionality in a neat one liner
-    arr = arr.flat(Infinity).sort(function(a, b){return a-b});
+    arr = arr.flat('Infinity').sort(function(a, b){return a-b});
 
     expect(arr).toEqual(expected);
   });
