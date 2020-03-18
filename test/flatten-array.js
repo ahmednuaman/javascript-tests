@@ -7,7 +7,7 @@ describe('flatten array', function () {
     let stringArr = arr.toString();
     let flattenedArr = arrAsString.split(',').map(Number);
 
-    arr = flatArr.sort();
+    arr = flattenedArr.sort();
 
     expect(arr).toEqual(expected);
   });
