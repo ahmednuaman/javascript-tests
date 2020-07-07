@@ -4,7 +4,16 @@ describe('flatten array', function () {
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
 
     var flatten = function(a) {
-      return a;
+      var res = [];
+
+      for(var i = 0; i < a.length; i++) {
+        if(Array.isArray(a[i])) {
+          res = res.concat(flatten(a[i]))
+        } else {
+          res.push(a[i]);
+        }
+      }
+      return res.sort();
     };
 
     arr = flatten(arr);

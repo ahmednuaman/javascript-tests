@@ -3,11 +3,11 @@ describe('clone object', function () {
     var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
         obj = {};
 
-    var cloneSimple = function(o) {
+    var clone = function(o) {
       return JSON.parse(JSON.stringify(o))
     };
 
-    obj = cloneSimple(expected);
+    obj = clone(expected);
 
     expect(obj).toEqual(expected);
     expect(obj).not.toBe(expected);
