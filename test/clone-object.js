@@ -8,13 +8,17 @@ describe('clone object', function () {
     obj = JSON.parse(JSON.stringify(expected));
 
 
-    // ES6 (shallow clone)
+    /*
+    // ---
+    // ES6 (not compatible with build server w/ node 3.3.1)
+    // ---
+    // (shallow clone)
     obj = {...expected};
     Object.assign(obj, expected);
 
-
-    // ES6 (deep clone w/ knowledge of nested array property)
+    // (deep clone w/ knowledge of nested array property)
     obj = {...expected, skills: [...expected.skills]};
+    */
 
 
     // ES5 (shallow clone)

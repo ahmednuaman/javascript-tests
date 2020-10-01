@@ -4,7 +4,7 @@ describe('scoping', function () {
         request;
 
     request = function (callback) {
-      return callback();          // Solution #1
+      // return callback();       // Solution #1
       return callback.call(mod);  // Solution #2
     };
 
@@ -17,8 +17,8 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(() => this.method());  // Solution #1
-      return request(this.method);          // Solution #2
+      // return request(() => this.method());  // Solution #1 (not compatible with build server w/ node 3.3.1)
+      return request(this.method);             // Solution #2
     };
 
     expect(mod.req()).toBe('bar');
