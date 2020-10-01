@@ -1,0 +1,11 @@
+{
+    "srcDir": "src",
+    "srcFiles": [
+      "**/*.js"
+    ],
+    "specDir": "test",
+    "specFiles": [
+      "*.js"
+    ],
+    "random": true
+  }
