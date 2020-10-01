@@ -4,13 +4,15 @@
   "description": "A suite of JavaScript tests (hopefully) useful for interviews",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "karma start karma.conf.js",
+    "watch": "karma start karma.conf.js --singleRun=false"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/ahmednuaman/javascript-tests.git"
   },
   "keywords": [
+    "karma",
     "testing",
     "test",
     "jasmine",
@@ -24,14 +26,13 @@
   },
   "homepage": "https://github.com/ahmednuaman/javascript-tests",
   "dependencies": {
-    "karma": "^0.12.32",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.22",
     "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma-phantomjs-launcher": "^1.0.4"
   },
   "devDependencies": {
     "karma-chrome-launcher": "^0.1.12",
-    "karma-firefox-launcher": "^0.1.6",
-    "jasmine": "^3.6.1",
-    "jasmine-browser-runner": "^0.4.0"
+    "karma-firefox-launcher": "^0.1.6"
   }
 }
