@@ -4,7 +4,7 @@ describe('clone object', function () {
         obj = {};
 
     obj = JSON.parse(JSON.stringify(expected));
-    
+
     expect(obj).toEqual(expected);
     expect(obj).not.toBe(expected);
   });
