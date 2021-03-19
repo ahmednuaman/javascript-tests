@@ -19,6 +19,8 @@
     "interview",
     "javascript"
   ],
+  "engines": { "node": ">=0.15" },
+  "engineStrict": true,
   "author": "Ahmed Nuaman (ahmed@ahmednuaman.com)",
   "license": "Apache v2",
   "bugs": {
