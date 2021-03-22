@@ -8,16 +8,15 @@ describe('scoping', function () {
     };
 
     function Module () {
-      return this.foo = 'bar';
+      this.foo = 'bar';
     }
 
     Module.prototype.method = function() {
       Module()
-      return this.foo;
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');
