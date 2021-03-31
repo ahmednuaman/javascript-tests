@@ -4,5 +4,3 @@ node_js:
   - "iojs"
 before_script:
   - export DISPLAY=:99.0
-  - npm install
-  - npm install jasmine-core
