@@ -4,7 +4,8 @@
   "description": "A suite of JavaScript tests (hopefully) useful for interviews",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js",
+    "watch": "karma start karma.conf.js --singleRun=false"
   },
   "repository": {
     "type": "git",
@@ -18,9 +19,7 @@
     "interview",
     "javascript"
   ],
-  "engines": {
-    "node": ">=0.15"
-  },
+  "engines": { "node": ">=0.15" },
   "engineStrict": true,
   "author": "Ahmed Nuaman (ahmed@ahmednuaman.com)",
   "license": "Apache v2",
@@ -29,13 +28,12 @@
   },
   "homepage": "https://github.com/ahmednuaman/javascript-tests",
   "dependencies": {
-    "karma": "^6.3.2",
-    "karma-jasmine": "^4.0.1",
-    "karma-phantomjs-launcher": "^1.0.4",
-    "node": "^15.12.0"
+    "karma": "^6.2.0",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.1.4"
   },
   "devDependencies": {
-    "karma-chrome-launcher": "^3.1.0",
-    "karma-firefox-launcher": "^2.1.0"
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-firefox-launcher": "^0.1.6"
   }
 }
