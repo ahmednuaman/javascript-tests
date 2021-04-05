@@ -2,7 +2,7 @@
 // Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
 
 module.exports = function(config) {
-  var browsers = ['Chrome','PhantomJS'];
+  var browsers = ['Chrome'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
@@ -68,6 +68,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };

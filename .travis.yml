@@ -2,7 +2,12 @@ language: node_js
 node_js:
   - "node"
   - "iojs"
-services:
-  - "xvfb"
 before_script:
+  - "15"
+before_install:
   - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+script:
+  - karma start karma.conf.js
+before_script:
+  - npm install
