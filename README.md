@@ -6,3 +6,6 @@ A suite of JavaScript tests (hopefully) useful for interviews
 1. `npm install`
 2. `npm test`/`npm watch`
 3. Get the candidate to complete the tests and Karma should watch the files and run the tests on save.
+
+## "But these tests are broke"
+Yes, yes they are broke. I need you to fix them and make a PR :)
