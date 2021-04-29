@@ -3,6 +3,11 @@ describe('flatten array', function () {
     var arr = [1, 2, [1, 2, [3, 4, 5, [1]]], 2, [2]],
         expected = [1, 1, 1, 2, 2, 2, 2, 3, 4, 5];
 
+      while (arr.some((value, index, array) => typeof value === 'object')) {
+          arr = arr.reduce((acc, val) => acc.concat(val), []);
+      }
+      arr = arr.sort();
+
     expect(arr).toEqual(expected);
   });
 });
