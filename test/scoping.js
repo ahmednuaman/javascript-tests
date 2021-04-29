@@ -7,13 +7,20 @@ describe('scoping', function () {
       return callback();
     };
 
+    // impl start
+    var self
+
     function Module () {
-      this.foo = 'bar';
+      // keeping .this in self variable to avoid scoping issues
+      self = this;
+      self.foo = 'bar';
     }
 
     Module.prototype.method = function() {
-      return this.foo;
+      return self.foo;
     };
+
+    // impl end
 
     Module.prototype.req = function() {
       return request(this.method);
