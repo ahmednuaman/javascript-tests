@@ -26,12 +26,15 @@
   },
   "homepage": "https://github.com/ahmednuaman/javascript-tests",
   "dependencies": {
-    "karma": "^0.12.32",
-    "karma-jasmine": "^0.3.5",
+    "karma": "^2.0.0",
     "karma-phantomjs-launcher": "^0.1.4"
   },
   "devDependencies": {
+    "jasmine-core": "^3.4.0",
+    "karma": "^0.12.37",
     "karma-chrome-launcher": "^0.1.12",
-    "karma-firefox-launcher": "^0.1.6"
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.8",
+    "karma-jasmine-html-reporter": "^1.4.0"
   }
 }
