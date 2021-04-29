@@ -15,8 +15,9 @@ describe('scoping', function () {
       return this.foo;
     };
 
+//     explicitely setting the 'this' value
     Module.prototype.req = function() {
-      return request(this.method);
+      return request(this.method.bind(this));
     };
 
     expect(mod.req()).toBe('bar');
