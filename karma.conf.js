@@ -3,9 +3,15 @@
 
 module.exports = function(config) {
   var browsers = ['PhantomJS', 'Firefox'];
+  var plugins = [
+    'karma-jasmine',
+    'karma-phantomjs-launcher',
+    'karma-firefox-launcher'
+  ];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
+    plugins.push('karma-chrome-launcher');
   }
 
   config.set({
@@ -18,6 +24,8 @@ module.exports = function(config) {
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['jasmine'],
 
+    plugins: plugins,
+
 
     // list of files / patterns to load in the browser
     files: [
@@ -27,14 +35,14 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      
+
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    
+
     },
 
 
