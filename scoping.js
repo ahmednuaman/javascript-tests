@@ -1,4 +1,4 @@
-return describe('scoping', function () {
+describe('scoping', function () {
   it('should correctly deal with scoping `this` back to the callee', function () {
     var mod = new Module(),
         request;
@@ -19,5 +19,4 @@ return describe('scoping', function () {
 
     expect(mod.req()).toBe('bar');
   });
-}); 
-//});
+});
