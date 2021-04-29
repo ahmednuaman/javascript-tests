@@ -1,10 +1,8 @@
 describe('scoping', function () {
   it('should correctly deal with scoping `this` back to the callee', function () {
-    var mod = new Module(),
-        request;
 
-    request = function (callback) {
-      return callback();
+    var request = function (callback) {
+      return callback;
     };
 
     function Module () {
@@ -16,8 +14,10 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      return request(this.method());
     };
+
+	var mod = new Module();
 
     expect(mod.req()).toBe('bar');
   });
