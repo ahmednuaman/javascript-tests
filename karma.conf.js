@@ -1,5 +1,6 @@
 // Karma configuration
 // Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
+plugins = ['karma-jasmine', 'karma-phantomjs-launcher'];
 
 module.exports = function(config) {
   var browsers = ['PhantomJS', 'Firefox'];
@@ -21,6 +22,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+        './node_modules/phantomjs-polyfill-object-assign/object-assign-polyfill.js',
       'test/**/*.js'
     ],
 
