@@ -2,7 +2,7 @@
 // Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
 
 module.exports = function(config) {
-  var browsers = ['PhantomJS', 'Firefox'];
+  var browsers = ['PhantomJS'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
@@ -27,14 +27,14 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-      
+
     ],
 
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-    
+
     },
 
 
