@@ -4,8 +4,8 @@
   "description": "A suite of JavaScript tests (hopefully) useful for interviews",
   "main": "index.js",
   "scripts": {
-    "test": "karma start karma.conf.js",
-    "watch": "karma start karma.conf.js --singleRun=false"
+    "test":  "browserify test/flatten-array.js -o test/flatten-array-browserified.js ; karma start karma.conf.js",
+    "watch": "browserify test/flatten-array.js -o test/flatten-array-browserified.js ; karma start karma.conf.js --singleRun=false"
   },
   "repository": {
     "type": "git",
@@ -27,11 +27,16 @@
   "homepage": "https://github.com/ahmednuaman/javascript-tests",
   "dependencies": {
     "karma": "^0.12.32",
-    "karma-jasmine": "^0.3.5",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "lodash": "^4.17.4",
+    "browserify": "^14.4.0"
   },
   "devDependencies": {
+    "jasmine-core": "^2.6.4",
     "karma-chrome-launcher": "^0.1.12",
-    "karma-firefox-launcher": "^0.1.6"
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.8",
+    "lodash": "^4.17.4"
   }
 }
