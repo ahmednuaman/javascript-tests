@@ -1,9 +1,11 @@
-describe('clone object', function () {
-  it('should clone an object', function () {
-    var expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']},
-        obj = {};
+describe('clone object', function () 
+{
+  it('should clone an object', function ()
+  {
+    const expected = {name: 'Ahmed', age: 27, skills: ['cycling', 'walking', 'eating']};
+         const clone = JSON.parse(JSON.stringify(expected));
 
-    expect(obj).toEqual(expected);
-    expect(obj).not.toBe(expected);
+    expect(clone).toEqual(expected);
+    expect(clone).not.toBe(expected);
   });
 });
