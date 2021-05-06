@@ -4,7 +4,7 @@ describe('scoping', function () {
         request;
 
     request = function (callback) {
-      return callback();
+      return callback.bind(this)();
     };
 
     function Module () {
@@ -16,7 +16,7 @@ describe('scoping', function () {
     };
 
     Module.prototype.req = function() {
-      return request(this.method);
+      return request.bind(this)(this.method);
     };
 
     expect(mod.req()).toBe('bar');
