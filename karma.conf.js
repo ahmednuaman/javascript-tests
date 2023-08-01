@@ -2,7 +2,7 @@
 // Generated on Wed Jun 18 2014 09:33:44 GMT+0100 (BST)
 
 module.exports = function(config) {
-  var browsers = ['PhantomJS', 'Firefox'];
+  let browsers = ['PhantomJS', 'Firefox'];
 
   if (!process.TRAVIS) {
     browsers.push('Chrome');
